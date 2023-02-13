@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Defect Data",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Defect Data_JSObject1",
+  "deleted": false,
+  "gitSyncId": "62f379e974d6e95d0a53f9a6_62f3821c74d6e95d0a53fc48"
+}
