@@ -80,7 +80,7 @@
                   "key": "primaryColumns.rowIndex.computedValue"
                 }
               ],
-              "leftColumn": 0,
+              "leftColumn": 20,
               "primaryColumns": {
                 "DefectID": {
                   "allowCellWrapping": false,
@@ -195,7 +195,7 @@
               "defaultSelectedRowIndex": 0,
               "key": "d39vo7kl5s",
               "isDeprecated": false,
-              "rightColumn": 59,
+              "rightColumn": 62,
               "textSize": "0.875rem",
               "widgetId": "6shls2nnzj",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -940,34 +940,63 @@
               "originalBottomRow": 138,
               "fontSize": "1rem",
               "minDynamicHeight": 4
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Select1",
+              "isFilterable": true,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+              "labelText": "Label",
+              "searchTags": [
+                "dropdown"
+              ],
+              "topRow": 45,
+              "bottomRow": 52,
+              "parentRowSpace": 10,
+              "labelWidth": 5,
+              "type": "SELECT_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "GREEN",
+              "animateLoading": true,
+              "parentColumnSpace": 12.5625,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "labelPosition": "Top",
+              "options": "[\n  {\n    \"label\": \"Blue\",\n    \"value\": \"BLUE\"\n  },\n  {\n    \"label\": \"PINK\",\n    \"value\": \"PINK\"\n  },\n  {\n    \"label\": \"Red\",\n    \"value\": \"RED\"\n  }\n]",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "a7ccjw0sbg",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "isDeprecated": false,
+              "rightColumn": 20,
+              "dynamicHeight": "FIXED",
+              "widgetId": "lyq3kvmf6q",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelAlignment": "left",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
             }
           ]
         },
         "layoutOnLoadActions": [
           [
-            {
-              "id": "Defect Data_JSObject1.myFun11",
-              "name": "JSObject1.myFun11",
-              "collectionId": "Defect Data_JSObject1",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  try {\n    await Api2.run();\n    if (appsmith.user.email = '') {\n      showAlert(\"test\");\n    }\n  } catch (error) {\n    showAlert(error.message + ' make my day');\n    return [{}];\n  }\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Defect Data_JSObject2.myFun1",
-              "name": "JSObject2.myFun1",
-              "collectionId": "Defect Data_JSObject2",
-              "clientSideExecution": true,
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  storeValue('aba', 'abab1', true);\n  console.log(appsmith.store.aba);\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Defect Data_get_defectdata",
               "name": "get_defectdata",
@@ -979,13 +1008,13 @@
           ],
           [
             {
-              "id": "Defect Data_JSObject2.function2",
-              "name": "JSObject2.function2",
-              "collectionId": "Defect Data_JSObject2",
+              "id": "Defect Data_JSObject1.myFun11",
+              "name": "JSObject1.myFun11",
+              "collectionId": "Defect Data_JSObject1",
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async () => {\n  return Api1.run().then(res => {\n    console.debug(res);\n  }).catch(() => {\n    console.error(\"can't run query\");\n    console.log('Directly from query', get_defectdata.data.results);\n  });\n}"
+                "async () => {\n  try {\n    await Api2.run();\n    if (appsmith.user.email = '') {\n      showAlert(\"test\");\n    }\n  } catch (error) {\n    showAlert(error.message + ' make my day');\n    return [{}];\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }

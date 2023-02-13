@@ -2,8 +2,16 @@ export default {
 	myVar1: [],
 	myVar2: {},
 	myFun1: async () => {
-		storeValue('aba','abab1',true)
-		console.log(appsmith.store.aba)
+		
+		appsmith.geolocation.watchPosition()
+		appsmith.geolocation.watchPosition((s)=>{
+			showAlert('hi')
+		}).catch((error)=>{console.log(error.message)})
+
+		//return Api2.data.users
+
+		// storeValue('aba','abab1',true)
+		// console.log(appsmith.store.aba)
 	//	return Api3.run()
 	},
 	myFun2: async () => {
